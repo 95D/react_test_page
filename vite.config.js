@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/react_test_page/',
+  base: './',
 })
