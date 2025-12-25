@@ -1,0 +1,12 @@
+/* App.css */
+.app-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  /* 부드러운 페이드인 효과 */
+  animation: pageFadeIn 0.3s ease-in;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

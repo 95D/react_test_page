@@ -1,0 +1,122 @@
+/* 로딩 컨테이너 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; 
+  gap: 20px;
+}
+
+/* 로딩 텍스트 스타일 */
+.loading-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: -0.02em;
+}
+
+/* 프로그레스 바 배경 */
+.progress-bar-bg {
+  width: 280px;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 프로그레스 바 게이지 애니메이션 */
+.progress-bar-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #ff3366; 
+  border-radius: 10px;
+  animation: loading-animation 2s infinite ease-in-out;
+  transform-origin: left;
+}
+
+@keyframes loading-animation {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(0.7); }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+
+/* 기존 아이돌 그리드 스타일 (유지) */
+.idol-list-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.idol-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.idol-list-container {
+  max-width: 1000px; /* 5개 배치가 보기 좋은 적정 너비 */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.idol-grid {
+  display: grid;
+  /* 가로 5개 고정 정렬 */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 15px;
+}
+
+.idol-card {
+  aspect-ratio: 1 / 1;
+  background-color: #ffffff;
+  border-radius: 16px; /* RoundRect 스타일 */
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.idol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.idol-thumbnail-container {
+  width: 65%; /* 이름이 보일 공간 확보를 위해 살짝 줄임 */
+  aspect-ratio: 1 / 1;
+  margin-bottom: 8px;
+}
+
+.idol-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.idol-name {
+  /* 텍스트가 명확히 보이도록 설정 */
+  display: block; 
+  width: 100%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1f2937; /* 진한 회색 */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 이름이 길면 ... 처리 */
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #666;
+}
